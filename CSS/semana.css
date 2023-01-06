@@ -1,0 +1,8 @@
+.contenedor-semana{
+    width: 50%;
+}
+@media (max-width:700px) {
+    .contenedor-semana{
+        width: 75%;
+    }
+}
