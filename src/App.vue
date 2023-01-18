@@ -1,3 +1,8 @@
+<script setup>
+import HeaderTitle from './components/HeaderTitle.vue';
+import AsideLeft from './components/AsideLeft.vue';
+</script>
 <template>
-  <h1>Hola mundo</h1>
+  <HeaderTitle/>
+  <AsideLeft/>
 </template>
