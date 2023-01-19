@@ -2,7 +2,7 @@
 defineProps({
     btnColor: {
         type: String,
-        default: "btn-primary",
+        default: "btn-primary", // El valor predeterminado del color del botón
     },
 })
 </script>
