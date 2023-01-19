@@ -2,6 +2,7 @@
 import DailyList from './DailyList.vue';
 import BtnPlus from './BtnPlus.vue';
 import NewGoalDaily from './NewGoalDaily.vue';
+import CalendarAside from './CalendarAside.vue';
 
 let arrayGoals = ['Tender cama', 'Leer', 'Hacer ejercicio', 'Programar', 'Organizar habitación']
 
@@ -23,6 +24,6 @@ let newGoal = (goal) => {
         </div>
         <hr class="display-celular">
         <!-- Calendario -->
-        <input type="date"/>
+        <CalendarAside />
     </aside>
 </template>
