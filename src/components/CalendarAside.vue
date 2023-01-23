@@ -1,27 +1,32 @@
 <script setup>
 // Establecer la fecha actual
-let today = new Date(),             // Fecha de hoy
+let today = new Date(),             // Fecha de hoy COMPLETA
     year = today.getFullYear(),     // Año
     month = today.getMonth(),       // Mes (inicia en 0)
-    daysMonth = new Date(year, month + 1, 0).getDate() + 1 // Cantidad de dias en el mes, mas uno para facilitar el procedimiento
+    daysMonth = new Date(year, month + 1, 0).getDate() + 1, // Cantidad de dias en el mes mas uno para facilitar el procedimiento
+    numToday = today.getDate()      // Fecha de hoy NUMERO
 
 let daysWeek = [[]], // Matriz donde se agregaran los dias ordenados
     nameDays = ['D', 'L', 'M', 'Mi', 'J', 'V', 'S'] // Abreviaturas de los dias de la semana
 
-let firstDay = new Date(year, month, 0).getDay() // Retorna la ubicacion del primer dia del mes
+let firstDay = new Date(year, month, 1).getDay() // Retorna la ubicacion del primer dia del mes
 
 // Crear matriz con los dias ordenados
+// num sera la variable para del numero de los dias
 let week = [], num = 1
-for (let day = 1; day <= (daysMonth + firstDay); day++) {
+
+for (let day = 1; day < (daysMonth + firstDay); day++) {
     if (day <= firstDay) week.push('') // si el dia es menor o igual al primer dia del mes se agrega una cadena vacia
     else {
         week.push(num)
         num++
     }
-    let ultimo = (daysMonth == num) ? true : false // verifica si es el ultimo dia del mes
-    if ((day % 7 == 0 && day != 0) || ultimo) { // si completa la semana o es el ultimo dia del mes
+    
+    let latestDay = (daysMonth == num) ? true : false,  // verifica si es el ultimo dia del mes
+        endWeek = (day % 7 == 0) ? true : false         // Verifica si se cunple la semana
+    if (latestDay || endWeek) { // si completa la semana o es el ultimo dia del mes
         daysWeek.push(week) // agrega la semana a la matriz de dias ordenados
-        week = [] // vacia la matriz de
+        week = [] // vacia el vector para iniciar nueva semana
     }
 }
 
@@ -80,8 +85,14 @@ switch (month) {
                 <th v-for="name in nameDays">{{ name }}</th> <!--Muestra los días de la semana en abreviatura-->
             </tr>
             <tr v-for="row in daysWeek">
-                <td v-for="col in row"> {{ col }}</td> <!--Muestra los días del mes en una tabla -->
+                <template v-for="col in row"> <!--Muestra los días del mes en una tabla -->
+                    <td v-if="col != numToday">{{ col }}</td>
+                    <td v-else class="text-danger">{{ col }}</td><!--Si es la fecha actual le agrega un estilo de color al texto -->
+                </template> 
             </tr>
         </table>
+    </div>
+    <div v-show="false">
+        <p>{{ numToday }} / {{ month + 1 }} / {{ year }}</p>
     </div>
 </template>
