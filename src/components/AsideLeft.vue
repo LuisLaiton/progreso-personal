@@ -1,22 +1,47 @@
 <script setup>
+import {ref} from 'vue'
 import DailyList from './DailyList.vue'; // importa el componente DailyList
 import BtnPlus from './BtnPlus.vue'; // importa el componente BtnPlus
 import NewGoalDaily from './NewGoalDaily.vue'; // importa el componente NewGoalDaily
 import CalendarAside from './CalendarAside.vue'; // importa el componente CalendarAside
 
-let arrayGoals = ['Tender cama', 'Leer', 'Hacer ejercicio', 'Programar', 'Organizar habitación'] // array con las metas diarias
+let arrayGoals = ref([ // array con las metas diarias
+    {
+        pend: true,
+        title: 'Tender cama'
+    },
+    {
+        pend: true,
+        title: 'Leer'
+    }, 
+    {
+        pend: false,
+        title: 'Hacer ejercicio'
+    }, 
+    {
+        pend: true,
+        title: 'Programar'
+    },
+    {
+        pend: true,
+        title: 'Organizar habitación'
+    }
+])
 
 let newGoal = (goal) => {
-    arrayGoals.unshift(goal) // agrega una nueva meta al array
-    console.log(arrayGoals) // muestra el array en la consola
+    arrayGoals.value.unshift({pend: true,
+                              title: goal}) // agrega una nueva meta al array
+    console.log(arrayGoals.value) // muestra el array en la consola
+}
+let checkGoal = (index) =>{
+    arrayGoals.value[index].pend = !arrayGoals.value[index].pend
 }
 </script>
 
 <template>
     <aside class="col-12 col-lg-3 pt-md-4 ps-md-4 ps-5 bg-dark text-bg-dark">
         <h2 class="text-primary">Metas diarias</h2>
-        <p>{{ arrayGoals }}</p> <!-- Muestra el array de metas diarias -->
-        <DailyList :arrayGoals="arrayGoals" :checkShow="true" />
+        <DailyList :arrayGoals="arrayGoals" @evento="checkGoal" />
         <!-- utiliza el componente DailyList para mostrar las metas diarias -->
         <!-- Agregar una nueva meta diaria -->
         <div class="d-flex justify-content-end">
