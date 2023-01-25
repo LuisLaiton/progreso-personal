@@ -21,7 +21,7 @@ for (let day = 1; day < (daysMonth + firstDay); day++) {
         week.push(num)
         num++
     }
-    
+
     let latestDay = (daysMonth == num) ? true : false,  // verifica si es el ultimo dia del mes
         endWeek = (day % 7 == 0) ? true : false         // Verifica si se cunple la semana
     if (latestDay || endWeek) { // si completa la semana o es el ultimo dia del mes
@@ -87,12 +87,22 @@ switch (month) {
             <tr v-for="row in daysWeek">
                 <template v-for="col in row"> <!--Muestra los días del mes en una tabla -->
                     <td v-if="col != numToday">{{ col }}</td>
-                    <td v-else class="text-danger">{{ col }}</td><!--Si es la fecha actual le agrega un estilo de color al texto -->
-                </template> 
+                    <td v-else class="text-danger">{{ col }}</td>
+                    <!--Si es la fecha actual le agrega un estilo de color al texto -->
+                </template>
             </tr>
         </table>
     </div>
-    <div v-show="false">
-        <p>{{ numToday }} / {{ month + 1 }} / {{ year }}</p>
-    </div>
 </template>
+
+<style>
+.display-celular {
+    display: block;
+}
+
+@media (max-width:1100px) {
+    .display-celular {
+        display: none;
+    }
+}
+</style>

@@ -1,5 +1,6 @@
 <script setup>
 import ProPhrase from './ProPhrase.vue';
+import Statistics from './Statistics.vue';
 import WeeklyGoals from './WeeklyGoals.vue';
 
 let proPhraseList = [
@@ -41,5 +42,6 @@ let proPhraseList = [
         <ProPhrase :proPhrase="proPhrase"/>
         <WeeklyGoals />
         <hr>
+        <Statistics />
     </section>
 </template>
