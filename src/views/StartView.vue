@@ -1,23 +1,33 @@
-<script>
+<script setup>
 import { RouterLink } from 'vue-router'
+import GroupButtons from '@/components/GroupButtons.vue'
+
+const botones = [
+    {
+        text: "Iniciar sesión",
+        url: "/login",
+        style: "btn-warning"
+    },
+    {
+        text: "Registrate",
+        url: "/registro",
+        style: "btn-outline-warning"
+    }
+]
 </script>
 
 <template>
-    <div class="container m-5">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="https://cdn-icons-png.flaticon.com/512/683/683646.png" class="img-fluid rounded-start"
-                    alt="...">
-            </div>
-            <div class="col-md-8 d-flex align-items-center">
-                <div class="ms-5">
-                    <h3 class="card-title">Se un poco mejor cada día</h3>
-                    <div class="btn-group mt-5">
-                        <RouterLink to="/login" class="btn btn-primary">Iniciar sesión</RouterLink>
-                        <RouterLink to="/registro" class="btn btn-outline-primary">Registrate</RouterLink>
-                    </div>
-                </div>
-            </div>
+    <div class="card text-bg-dark">
+        <img src="https://i.pinimg.com/originals/cf/64/85/cf648573dbd90bdfc3f9c547517fb64b.jpg" class="card-img"
+            alt="...">
+        <div class="card-img-overlay text-center container px-5 d-flex flex-column justify-content-center">
+            <blockquote class="blockquote my-5">
+                <h3 class="my-4">El cambio siempre supone resistencia, porque establecer un nuevo hábito supone un esfuerzo y todo nuestro ser nos pide, aunque nos estemos comportando de forma perjudicial para nosotros mismos, seguir actuando como lo veníamos haciendo</h3>
+                <footer class="blockquote-footer">
+                    <cite title="Source Title"></cite>
+                </footer>
+            </blockquote>
+            <GroupButtons :infoBotones="botones" />
         </div>
     </div>
 </template>

@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import HeaderTitle from '@/components/HeaderTitle.vue';
+import HeaderTitle from '@/components/HeaderTitle.vue'
+import FooterInfo from '@/components/FooterInfo.vue'
 </script>
 
 <template>
@@ -9,7 +10,8 @@ import HeaderTitle from '@/components/HeaderTitle.vue';
   <body>
     <RouterView />
   </body>
-
+  
+  <FooterInfo />
 </template>
 
 <style>
