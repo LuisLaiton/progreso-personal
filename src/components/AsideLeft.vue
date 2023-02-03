@@ -5,17 +5,17 @@ import BtnPlus from './BtnPlus.vue'; // importa el componente BtnPlus
 import NewGoalDaily from './NewGoalDaily.vue'; // importa el componente NewGoalDaily
 import CalendarAside from './CalendarAside.vue'; // importa el componente CalendarAside
 
-let arrayGoals = ref([ // array con las metas diarias
+const arrayGoals = ref([ // array con las metas diarias
     {
         pend: true,
         title: 'Tender cama'
     },
     {
-        pend: true,
+        pend: false,
         title: 'Leer'
     }, 
     {
-        pend: false,
+        pend: true,
         title: 'Hacer ejercicio'
     }, 
     {
@@ -28,14 +28,11 @@ let arrayGoals = ref([ // array con las metas diarias
     }
 ])
 
-let newGoal = (goal) => {
-    arrayGoals.value.unshift({pend: true,
-                              title: goal}) // agrega una nueva meta al array
-    console.log(arrayGoals.value) // muestra el array en la consola
-}
-let checkGoal = (index) =>{
-    arrayGoals.value[index].pend = !arrayGoals.value[index].pend
-}
+// agrega una nueva meta al array
+let newGoal = (goal) => arrayGoals.value.unshift({pend: true, title: goal})
+
+// deshabilita la meta
+let checkGoal = (index) => arrayGoals.value[index].pend = !arrayGoals.value[index].pend
 </script>
 
 <template>

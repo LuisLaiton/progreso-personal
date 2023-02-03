@@ -1,7 +1,6 @@
 <script setup>
-import AsideLeft from '@/components/AsideLeft.vue';
-import MainBody from '@/components/MainBody.vue';
-import FooterInfo from '@/components/FooterInfo.vue';
+import AsideLeft from '@/components/AsideLeft.vue'
+import MainBody from '@/components/MainBody.vue'
 </script>
 
 <template>
@@ -9,5 +8,4 @@ import FooterInfo from '@/components/FooterInfo.vue';
     <AsideLeft />
     <MainBody />
   </body>
-  <FooterInfo />
 </template>

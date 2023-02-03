@@ -5,7 +5,7 @@ defineProps(["titulo", "loginDisabled", "btns"])
 </script>
 
 <template>
-    <div class="card text-bg-dark mx-auto my-5 py-3" id="login">
+    <div class="card text-bg-dark mx-auto my-5 py-5" id="login">
         <h3 class="card-title text-center text-info">{{ titulo }}</h3>
         <div class="card-body">
             <!-- Name -->
@@ -39,13 +39,14 @@ defineProps(["titulo", "loginDisabled", "btns"])
                 </select>
             </div>
         </div>
-        <GroupButtons :infoBotones="btns"/>
+        <GroupButtons :infoBotones="btns" />
     </div>
 </template>
 
 <style>
 #login {
     width: 50%;
+    min-height: 300px;
 }
 
 .text-width {

@@ -1,6 +1,6 @@
 <script setup>
 const emit = defineEmits(['evento']) // Declara un evento personalizado llamado "evento"
-let goal = "" // Inicializa una variable "goal" vacía
+let goal = ""
 </script>
 
 <template>

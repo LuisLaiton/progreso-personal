@@ -9,15 +9,8 @@ const emit = defineEmits(['evento'])
 </script>
 
 <template>
-    <form action="" class="container">
-        <div v-for="(meta, index) in arrayGoals" :key="index" @click="emit('evento', index)">
-            <!-- Itera sobre el array de metas diarias y las muestra como una lista -->
-            <input v-show="meta.pend" type="checkbox" :name="index" :id="index">
-            <!-- muestra un checkbox si la meta esta pendiente -->
-            <label class="ps-4"> <!-- Muestra cada meta diaria -->
-                <span class="text-secondary"  v-show="!meta.pend">{{ meta.title }}</span>
-                <span v-show="meta.pend">{{ meta.title }}</span>
-            </label>
-        </div>
-    </form>
+    <div class="form-check form-switch" v-for="(meta, index) in arrayGoals" :key="index">
+        <input class="form-check-input" type="checkbox" :checked="!meta.pend" :disabled="!meta.pend" @click="emit('evento', index)">
+        <label class="form-check-label" for="flexSwitchCheckDefault">{{ meta.title }}</label>
+    </div>
 </template>
