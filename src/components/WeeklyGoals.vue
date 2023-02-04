@@ -1,7 +1,8 @@
 <script setup>
-import BtnTransparent from './BtnTransparent.vue';
+import BtnTransparent from './BtnTransparent.vue'
+import GroupButtons from '@/components/GroupButtons.vue'
 
-let weekList = [
+const weekList = [
     {
         goal: 7,
         Advance: 2,
@@ -22,6 +23,13 @@ let weekList = [
         Advance: 2,
         title: 'Ejercicio'
     },
+],
+botones = [
+    {
+        text: "Nueva semana",
+        url: "/nuevaSemana",
+        style: "btn-outline-success"
+    }
 ]
 
 for (let i of weekList) {
@@ -44,7 +52,7 @@ for (let i of weekList) {
                 <p>{{ item.title }}</p>
             </div>
             <div class="d-flex justify-content-end">
-                <BtnTransparent btnColor="btn-outline-success" text="Nueva semana" enlace=""/>
+                <GroupButtons infoBotones="false" :infoRouter="botones" />
             </div>
         </article>
 </template>

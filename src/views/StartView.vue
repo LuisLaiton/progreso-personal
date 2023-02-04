@@ -27,7 +27,7 @@ const botones = [
                     <cite title="Source Title"></cite>
                 </footer>
             </blockquote>
-            <GroupButtons :infoBotones="botones" />
+            <GroupButtons infoBotones="false" :infoRouter="botones"/>
         </div>
     </div>
 </template>
