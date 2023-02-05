@@ -1,5 +1,5 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 import GroupButtons from './GroupButtons.vue';
 
 defineProps(["titulo", "typeForm", "btns"])
@@ -66,7 +66,7 @@ const info = ref({
                 <input type="range" class="form-control form-range py-4" min="1" max="7" step="1">
             </div>
         </div>
-        <GroupButtons :infoBotones="btns"/>
+        <GroupButtons :infoBotones="btns" />
     </div>
 </template>
 
@@ -78,5 +78,18 @@ const info = ref({
 
 .text-width {
     width: 30%;
+}
+
+@media (max-width: 750px) {
+    .custom-card {
+        width: 90%;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+    .text-width {
+        width: 52%;
+    }
 }
 </style>
