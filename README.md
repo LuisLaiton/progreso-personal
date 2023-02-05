@@ -1,29 +1,15 @@
 # progreso-personal
 
-This template should help get you started developing with Vue 3 in Vite.
+Este es un proyecto que ayuda al registro de las metas personales que se plantean
 
-## Recommended IDE Setup
+### Metas semanales
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Las metas semanales son aquellas que se especifican al iniciar, las cuales tienen una meta de repeticiones sin importar el día, estas metas semanales se guardaran para crear un historial y generar el análisis
 
-## Customize configuration
+### Metas diarias
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+En las metas diarias se incluyen las metas semanales que no se han cumplido, así como también las metas diarias que el usuario decida, estas metas no se guardaran de forma específica solo afecta si se cumple o no
 
-## Project Setup
+## Netlify
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+See [Netlify (proyecto lanzado V0.1)](https://progreso-personal.netlify.app/).
