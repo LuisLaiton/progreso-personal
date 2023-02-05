@@ -29,5 +29,5 @@ const infoForm = (user, password) => {
 </script>
 
 <template>
-    <FormAccess titulo="Login" typeForm="login" btns="false" :btnRouter="botones"  />
+    <FormAccess titulo="Login" typeForm="login" :btns="botones" />
 </template>

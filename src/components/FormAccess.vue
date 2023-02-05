@@ -2,8 +2,7 @@
 import {ref} from 'vue'
 import GroupButtons from './GroupButtons.vue';
 
-defineProps(["titulo", "typeForm", "btns", "btnRouter"])
-const emit = defineEmits(['evento'])
+defineProps(["titulo", "typeForm", "btns"])
 
 const info = ref({
     name: '',
@@ -11,7 +10,7 @@ const info = ref({
     password: '',
     dateBirth: '',
     gender: '',
-    titleGoal: ',',
+    titleGoal: '',
     goalGoal: 0
 })
 </script>
@@ -67,7 +66,7 @@ const info = ref({
                 <input type="range" class="form-control form-range py-4" min="1" max="7" step="1">
             </div>
         </div>
-        <GroupButtons :infoBotones="btns" :infoRouter="btnRouter" @click="emit('evento', info.titleGoal)"/>
+        <GroupButtons :infoBotones="btns"/>
     </div>
 </template>
 

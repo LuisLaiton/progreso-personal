@@ -52,7 +52,7 @@ for (let i of weekList) {
                 <p>{{ item.title }}</p>
             </div>
             <div class="d-flex justify-content-end">
-                <GroupButtons infoBotones="false" :infoRouter="botones" />
+                <GroupButtons :infoBotones="botones" />
             </div>
         </article>
 </template>

@@ -48,6 +48,6 @@ const newGoal = ( title) => {
     <div class="d-flex justify-content-center">
         <infoWeek />
     </div>
-    <FormAccess titulo="Nueva semana" typeForm="semana" :btns="botones" btnRouter="false" @evento="newGoal"/>
+    <FormAccess titulo="Nueva semana" typeForm="semana" :btns="botones"/>
     <ResumeWeek :goals="thisWeek" />
 </template>

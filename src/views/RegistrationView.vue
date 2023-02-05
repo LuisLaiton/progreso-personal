@@ -11,5 +11,5 @@ const botones = [
 </script>
 
 <template>
-    <FormAccess titulo="Registro" typeForm="registro" btns="false" :btnRouter="botones" />
+    <FormAccess titulo="Registro" typeForm="registro" :btns="botones"/>
 </template>

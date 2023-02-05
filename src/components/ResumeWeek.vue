@@ -25,6 +25,6 @@ const botones = [
                 {{ item.title }} - {{ item.goal }}
             </li>
         </ul>
-        <GroupButtons :infoBotones="botones" infoRouter="false"/>
+        <GroupButtons :infoBotones="botones" />
     </section>
 </template>
