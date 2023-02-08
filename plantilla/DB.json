@@ -4,7 +4,7 @@
             "name": "Luis Felipe Laiton Cortes",
             "user": "LuisFLaiton",
             "password": "LuisFLaiton",
-            "dateBirth": "28/06/2000",
+            "dateBirth": "2000-06-28",
             "gender": "Masculino"
         },
         "DailyGoals": [
@@ -34,7 +34,7 @@
                 "pastWeeks": [
                     {
                         "id": "01012023",
-                        "resume" : [
+                        "resume": [
                             {
                                 "title": "Tender la cama",
                                 "percentage": 78.34
@@ -55,7 +55,7 @@
                     },
                     {
                         "id": "08012023",
-                        "resume" : [
+                        "resume": [
                             {
                                 "title": "Tender la cama",
                                 "percentage": 63
@@ -80,7 +80,7 @@
                     },
                     {
                         "id": "15012023",
-                        "resume" : [
+                        "resume": [
                             {
                                 "title": "Tender la cama",
                                 "percentage": 100
@@ -101,7 +101,7 @@
                     },
                     {
                         "id": "22012023",
-                        "resume" : [
+                        "resume": [
                             {
                                 "title": "Tender la cama",
                                 "percentage": 78.34
@@ -122,7 +122,7 @@
                     },
                     {
                         "id": "29012023",
-                        "resume" : [
+                        "resume": [
                             {
                                 "title": "Tender la cama",
                                 "percentage": 78.34

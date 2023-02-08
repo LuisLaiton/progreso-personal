@@ -29,6 +29,11 @@ const router = createRouter({
       component: () => import('@/views/NewWeekView.vue')
     },
     {
+      path: '/usuario',
+      name: 'usuario',
+      component: () => import('@/views/UserView.vue')
+    },
+    {
       path: "/:pathMach(.*)*",
       name: "NotFound",
       component: () => import('@/views/NotFoundView.vue')
